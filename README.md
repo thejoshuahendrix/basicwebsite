@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This is a basic website built with CRA template, with typescript, cypress testing, styled components, themes, and react-router-dom all setup for easy grab and go websites.
+This is a basic website built with CRA template, with Typescript, Docker, Cypress testing, styled components, themes, and react-router-dom all setup for easy grab and go websites.
 
 ## Available Scripts
 
