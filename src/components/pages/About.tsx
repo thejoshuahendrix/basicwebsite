@@ -11,8 +11,7 @@ const AboutWrapper = styled.div`
 const About = () => {
     return (
         <AboutWrapper id="aboutwrapper">
-            This is a simple Web3 app built by Joshua Hendrix, with the help of LVK.
-            Its purpose is to see the utility of Web3 for frontend applications.
+            This is a website template, built by Joshua Hendrix. It is for easy grab and go setup. It has styled-components, react-router, cypress and themes already setup so you can hit the ground running!
         </AboutWrapper>
     )
 }
