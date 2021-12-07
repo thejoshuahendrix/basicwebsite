@@ -85,7 +85,6 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
 
   a {
     font-size: 1rem;
-    text-transform: uppercase;
     padding: 2rem 0;
     font-weight: bold;
     letter-spacing: 0.5rem;
@@ -128,10 +127,11 @@ const Navbar = ({ themeChanger }: Props) => {
         <TopBar id="nav">
             <NavWrapper>
                 <Logo><Link id="homelink" style={{ textDecoration: "none" }} to='/'>LOGO</Link>
-                    <ToggleThemeButton onClick={() => { setToggle(!toggle); themeChanger(); log.ok('Theme Changed',"Good Job") }} active={toggle}  >Toggle Theme</ToggleThemeButton>
+                    
                 </Logo>
                 <LinkWrapper>
-
+                <div style={{fontSize:'14px'}}> Theme:</div>
+                <ToggleThemeButton onClick={() => { setToggle(!toggle); themeChanger(); log.ok('Theme Changed',"Good Job") }} active={toggle}  ></ToggleThemeButton>
 
                     {isDesktopOrLaptop && <>
                         <Link id="contactlink" style={{ textDecoration: "none", fontSize: "20px" }} to='/contact'>Contact</Link>
