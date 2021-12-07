@@ -1,16 +1,15 @@
 import { createLogger } from '@lvksh/logger';
-import chalk from 'chalk';
 
 export const log = createLogger(
     {
-        ok: {label: chalk.greenBright`[OK]`,newLine: '| ', newLineEnd: '\\-'},
-        debug: chalk.magentaBright`[DEBUG]`,
+        ok: {label: `[OK]`,newLine: '| ', newLineEnd: '\\-'},
+        debug: `[DEBUG]`,
         info: {
-            label: chalk.cyan`[INFO]`,
-            newLine: chalk.cyan`⮡`,
-            newLineEnd: chalk.cyan`⮡`,
+            label: `[INFO]`,
+            newLine: `⮡`,
+            newLineEnd: `⮡`,
         },
-        veryBigNetworkError: chalk.bgRed.white.bold`[NETWORK]`,
+        veryBigNetworkError: `[NETWORK]`,
     },
     { padding: "PREPEND"},
     console.log
