@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const PrivacyWrapper = styled.div`
     background-color:  ${({ theme }) => theme.background.secondary};;
-    height: 60vh;
+    height: 100%;
     width: 90%;
     margin: auto;
     margin-top: 5%;

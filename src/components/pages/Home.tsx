@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 const HomeWrapper = styled.div`
     background-color:  ${({ theme }) => theme.background.secondary};;
-    height: 60vh;
+    min-height: 60vh;
+    height: 100%;
     width: 90%;
     margin: auto;
     margin-top: 5%;
