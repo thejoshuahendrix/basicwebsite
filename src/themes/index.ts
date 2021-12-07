@@ -41,11 +41,11 @@ export const LightTheme: DefaultTheme = {
     background: '#D3D3D3',
     text: '#121212'
   },
-  background:{
+  background: {
     primary: "#E5EBEA",
     secondary: '#F3F3F3',
     ternary: "#D4d4d4",
-    image:lightBackground
-  }, 
+    image: lightBackground
+  },
   mobile: '1000px'
 }
