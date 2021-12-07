@@ -12,6 +12,7 @@ declare module 'styled-components' {
         card: {
             borderRadius: string,
             boxShadow: string,
+            boxShadowSmall: string,
             gradient: string
         },
         button: {

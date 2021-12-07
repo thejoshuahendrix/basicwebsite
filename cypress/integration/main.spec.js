@@ -85,3 +85,10 @@ describe("should route to home through burger", () => {
     cy.get("#main").should("exist");
   });
 });
+describe("should route to privacy page", () => {
+  it("renders correctly", () => {
+    cy.visit("/");
+    cy.get("#privacylink").click();
+    cy.get("#privacy").should("exist");
+  });
+});

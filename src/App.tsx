@@ -8,6 +8,8 @@ import Contact from './components/pages/Contact';
 import About from './components/pages/About';
 import Home from './components/pages/Home';
 import { AppWrapper } from "./components/AppWrapper";
+import Footer from "./components/layout/Footer";
+import Privacy from "./components/pages/Privacy";
 
 
 
@@ -20,21 +22,23 @@ function App() {
     setTheme(theme === DarkTheme ? LightTheme : DarkTheme);
   };
   return (
-    
-      
+
+
     <ThemeProvider theme={theme}>
       <AppWrapper>
-      <Router>
-        <Navbar themeChanger={changeTheme} />
-        <Hero />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </Router>
-      
-    </AppWrapper>
+        <Router>
+          <Navbar themeChanger={changeTheme} />
+          <Hero />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy" element={<Privacy />} />
+          </Routes>
+
+          <Footer />
+        </Router>
+      </AppWrapper>
     </ThemeProvider>
   );
 }

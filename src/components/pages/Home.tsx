@@ -15,12 +15,14 @@ const HomeTextWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     border-radius: ${({theme})=> theme.card.borderRadius};
+    text-align: center;
+    padding: 40px;
 `
 
 const Home = () => {
     return (
         <HomeWrapper>
-            <HomeTextWrapper id="main" style={{padding: '30px', margin: 'auto', textAlign:'center' }}><h1>Welcome to the Main Page</h1></HomeTextWrapper>
+            <HomeTextWrapper id="main" ><h1>Welcome to the Main Page</h1></HomeTextWrapper>
         </HomeWrapper>
     )
 }
