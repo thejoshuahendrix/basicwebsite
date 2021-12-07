@@ -1,25 +1,33 @@
-import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Navbar from './components/layout/Navbar';
+import { DefaultTheme, ThemeProvider } from 'styled-components';
+import { DarkTheme, LightTheme } from './themes';
+import { useState } from 'react';
+import Hero from './components/layout/Hero';
+import Contact from './components/pages/Contact';
+import About from './components/pages/About';
+import Home from './components/pages/Home';
 
 function App() {
+  const [theme, setTheme] = useState<DefaultTheme>(DarkTheme);
+  const changeTheme = () => {
+    setTheme(theme === DarkTheme ? LightTheme : DarkTheme);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <Navbar themeChanger={changeTheme} />
+        <Hero />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 }
 
