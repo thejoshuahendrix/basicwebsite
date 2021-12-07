@@ -1,9 +1,3 @@
-// main.spec.js created with Cypress
-//
-// Start writing your Cypress tests below!
-// If you're unfamiliar with how Cypress works,
-// check out the link below and learn how to write your first test:
-// https://on.cypress.io/writing-first-test
 describe("should render home page", () => {
   it("renders correctly", () => {
     cy.visit("/");
@@ -90,5 +84,23 @@ describe("should route to privacy page", () => {
     cy.visit("/");
     cy.get("#privacylink").click();
     cy.get("#privacy").should("exist");
+  });
+});
+describe("should give error if contact form has no input", () => {
+  it("give error correctly", () => {
+    cy.visit("/contact");
+    cy.get("#submitButton").click();
+    cy.contains("Enter all fields!").should("exist");
+  });
+});
+
+describe("should give email sent if contact form has input", () => {
+  it("render email sent", () => {
+    cy.visit("/contact");
+    cy.get("#nameInput").type('Josh');
+    cy.get("#emailInput").type('Josh');
+    cy.get("#messageInput").type('Josh');
+    cy.get("#submitButton").click();
+    cy.contains("Email Sent!").should("exist");
   });
 });

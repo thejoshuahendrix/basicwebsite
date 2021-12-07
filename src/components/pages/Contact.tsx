@@ -56,21 +56,31 @@ const ContactHeading = styled.div`
 
 const Contact = () => {
     const [text, setText] = useState('');
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
     const handleSubmit = (e: any) => {
         e.preventDefault();
-        setText('Email Sent!')
+        if(name == "" || email == "" || message == "")
+        {
+            setText('Enter all fields!')
+        }else{
+            setText('Email Sent!')
+        }
+        
     }
     return (
         <FormWrapper id="contact">
             <Form data-testid="contactForm">
                 <ContactHeading>Contact Me!</ContactHeading>
                 <label>Name</label>
-                <Input data-testid='nameInput' type="text" name="name" />
+                <Input id='nameInput' onChange={(e)=> setName(e.target.value)} type="text" name="name" />
                 <label>Email</label>
-                <Input data-testid='emailInput' type="email" name="email" />
+                <Input id='emailInput'onChange={(e)=> setEmail(e.target.value)}  type="email" name="email" />
                 <label>Message</label>
-                <TextArea data-testid='messageInput' name="message" />
-                <Button data-testid='submitButton' onClick={(e)=>handleSubmit(e)}>Submit</Button>
+                <TextArea id='messageInput'onChange={(e)=> setMessage(e.target.value)}  name="message" />
+                <Button id='submitButton' onClick={(e)=>handleSubmit(e)}>Submit</Button>
                 <div>{text}</div>
             </Form>
         </FormWrapper>
