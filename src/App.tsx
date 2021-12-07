@@ -7,6 +7,12 @@ import Hero from './components/layout/Hero';
 import Contact from './components/pages/Contact';
 import About from './components/pages/About';
 import Home from './components/pages/Home';
+import { AppWrapper } from "./components/AppWrapper";
+
+
+
+
+
 
 function App() {
   const [theme, setTheme] = useState<DefaultTheme>(DarkTheme);
@@ -14,7 +20,10 @@ function App() {
     setTheme(theme === DarkTheme ? LightTheme : DarkTheme);
   };
   return (
+    
+      
     <ThemeProvider theme={theme}>
+      <AppWrapper>
       <Router>
         <Navbar themeChanger={changeTheme} />
         <Hero />
@@ -24,6 +33,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
+      
+    </AppWrapper>
     </ThemeProvider>
   );
 }

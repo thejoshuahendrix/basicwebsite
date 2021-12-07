@@ -3,7 +3,9 @@ import styled from 'styled-components'
 const HomeWrapper = styled.div`
     background-color:  ${({ theme }) => theme.background.secondary};;
     height: 60vh;
-    width: 100%;
+    width: 90%;
+    margin: auto;
+    margin-top: 5%;
     color:  ${({ theme }) => theme.text.primary};
     border-radius: ${({theme})=> theme.card.borderRadius};
     box-shadow: ${({theme})=> theme.card.boxShadow};
