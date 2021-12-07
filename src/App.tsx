@@ -13,9 +13,6 @@ import Privacy from "./components/pages/Privacy";
 
 
 
-
-
-
 function App() {
   const [theme, setTheme] = useState<DefaultTheme>(DarkTheme);
   const changeTheme = () => {
