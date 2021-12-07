@@ -3,11 +3,9 @@ import darkBackground from '../assets/background1.jpg'
 import lightBackground from '../assets/background2.jpg'
 
 export const DarkTheme: DefaultTheme = {
-  colors: {
-    text: '#ffffff',
-    textSecondary: "#1b8af2",
-    background: '#181b1f',
-    backdrop: '#212c3b',
+  text: {
+    primary: '#ffffff',
+    secondary: "#1b8af2",
     ternary: '#444444'
   },
   card: {
@@ -19,17 +17,18 @@ export const DarkTheme: DefaultTheme = {
     background: '#D3D3D3',
     text: '#121212'
   },
-  background: darkBackground,
-  heading: '#f0f0f0',
+  background: {
+    primary: '#181b1f',
+    secondary: '#212c3b',
+    ternary: "245245",
+    image: darkBackground,
+  },
   mobile: '1000px'
 }
-
 export const LightTheme: DefaultTheme = {
-  colors: {
-    text: '#222222',
-    textSecondary: '#CE2D4F',
-    background: "#E5EBEA",
-    backdrop: '#F3F3F3',
+  text: {
+    primary: '#222222',
+    secondary: '#CE2D4F',
     ternary: '#dddddd'
   },
   card: {
@@ -42,7 +41,11 @@ export const LightTheme: DefaultTheme = {
     background: '#D3D3D3',
     text: '#121212'
   },
-  background: lightBackground,
-  heading: '#050505',
+  background:{
+    primary: "#E5EBEA",
+    secondary: '#F3F3F3',
+    ternary: "#D4d4d4",
+    image:lightBackground
+  }, 
   mobile: '1000px'
 }

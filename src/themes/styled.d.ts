@@ -4,11 +4,9 @@ import "styled-components";
 
 declare module 'styled-components' {
     export interface DefaultTheme {
-        colors: {
-            text: string,
-            textSecondary: string,
-            background: string,
-            backdrop: string,
+        text: {
+            primary: string,
+            secondary: string,
             ternary: string
         },
         card: {
@@ -20,8 +18,13 @@ declare module 'styled-components' {
             text: string,
             background: string
         },
-        background: string,
-        heading: string,
+        background:{
+            primary: string,
+            secondary: string,
+            ternary:string,
+            image:string
+        } 
+    
         mobile:string
     }
 }

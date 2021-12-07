@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Input = styled.input`
     height: 30px;
     width: 50%;
-    background-color: ${({theme})=> theme.colors.ternary};
+    background-color: ${({theme})=> theme.text.ternary};
     border: .5px solid #444444;
     border-radius: 10px;
     
@@ -12,7 +12,7 @@ const Input = styled.input`
 const TextArea = styled.textarea`
     height: 90px;
     width: 50%;
-    background-color: ${({theme})=> theme.colors.ternary};
+    background-color: ${({theme})=> theme.text.ternary};
 
     border: .5px solid #444444;
     border-radius: 10px;
@@ -35,8 +35,8 @@ const Form = styled.form`
     margin: 10% auto 10% auto;
     padding: 20px 0 20px 0;
     width: 80%;
-    color: ${({theme})=> theme.colors.textSecondary};
-    background-color: ${({theme})=> theme.colors.background};
+    color: ${({theme})=> theme.text.secondary};
+    background-color: ${({theme})=> theme.background.primary};
     border-radius: ${({theme})=> theme.card.borderRadius};
 `
 const FormWrapper = styled.div`

@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 const HomeWrapper = styled.div`
-    background-color:  ${({ theme }) => theme.colors.backdrop};;
+    background-color:  ${({ theme }) => theme.background.secondary};;
     height: 60vh;
     width: 100%;
-    color:  ${({ theme }) => theme.heading};
+    color:  ${({ theme }) => theme.text.primary};
     border-radius: ${({theme})=> theme.card.borderRadius};
     box-shadow: ${({theme})=> theme.card.boxShadow};
 `

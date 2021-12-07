@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const ToggleThemeButton = styled.div<{ active: boolean }>`
-  background: ${({ theme }) => theme.colors.background};
-  color: ${({ theme }) => theme.colors.textSecondary};
+  background: ${({ theme }) => theme.background.primary};
+  color: ${({ theme }) => theme.text.secondary};
   padding: 1rem;
   text-align: center;
   font-size: 14px;

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const HeroImage = styled.div`
   width: 100%;
   height: 400px;
-  background: url(${({theme})=> theme.background});
+  background: url(${({theme})=> theme.background.image});
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -18,7 +18,7 @@ const HeroText = styled.div`
   top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: ${({theme})=> theme.heading};
+  color: ${({theme})=> theme.text.primary};
   font-size: 72px;
   
 `
@@ -29,7 +29,7 @@ const HeroLowerText = styled.div`
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: ${({theme})=> theme.heading};
+  color: ${({theme})=> theme.text.primary};
   font-size: 45px;
   @media (max-width: 1000px) {
       opacity: 0%;

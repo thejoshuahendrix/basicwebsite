@@ -9,17 +9,17 @@ import Menu from './Menu';
 
 const TopBar = styled.div`
     height: 50px;
-    background: ${({ theme }) => theme.colors.background};
+    background: ${({ theme }) => theme.background.primary};
     position: absolute;
     top: 0;
-    color: ${({ theme }) => theme.heading};
+    color: ${({ theme }) => theme.text.primary};
     width: 100%;
     padding: 0.5rem 0 0 0;
     z-index: 20;
     box-shadow: ${({ theme }) => theme.card.boxShadow};
     
     a:visited{
-        color: ${({ theme }) => theme.heading};
+        color: ${({ theme }) => theme.text.primary};
     }
 
 `
@@ -38,7 +38,7 @@ const Logo = styled.div`
     height: 40px;
     margin-bottom: 20px;
     a:hover{
-        color: ${({ theme }) => theme.colors.text};
+        color: ${({ theme }) => theme.text.primary};
     }
 `
 export const LinkWrapper = styled.div`
@@ -50,7 +50,7 @@ export const LinkWrapper = styled.div`
     gap: 2rem;
     z-index: 120;
     a:hover{
-        color: ${({ theme }) => theme.colors.text};
+        color: ${({ theme }) => theme.text.primary};
     }
 `
 export const ConnectButton = styled.button`
@@ -67,7 +67,7 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: ${({ theme }) => theme.colors.backdrop};
+  background: ${({ theme }) => theme.background.secondary};
   height: 50vh;
   width: 25vw;
   text-align: center;
@@ -89,12 +89,12 @@ export const StyledMenu = styled.nav<{ open: boolean }>`
     padding: 2rem 0;
     font-weight: bold;
     letter-spacing: 0.5rem;
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.text.primary};
     text-decoration: none;
     transition: color 0.3s linear;
 
     &:hover {
-      color: ${({ theme }) => theme.colors.textSecondary};
+      color: ${({ theme }) => theme.text.secondary};
     }
   }
 `;
